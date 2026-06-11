@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BlackDogs Security | Ciberseguridad e infraestructura gestionada</title>
-    <meta name="description" content="BlackDogs Security diseña, opera y protege infraestructura, cloud, VSOC, VCISO, backups, monitorización y continuidad operativa para organizaciones que necesitan control real.">
+    <meta name="description" content="BlackDogs Security diseña, opera y protege infraestructura, cloud, VSOC, VCISO, backups, monitorización y continuidad operativa desde Barcelona y Andorra para organizaciones que necesitan control real.">
     <meta name="theme-color" content="#050706">
     <link rel="canonical" href="https://blackdogs.io/">
     <link rel="alternate" hreflang="es" href="https://blackdogs.io/">
@@ -19,11 +19,13 @@
     <meta property="og:locale:alternate" content="ca_ES">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:site_name" content="BlackDogs Security">
-    <meta property="og:image" content="https://blackdogs.io/assets/blackdogs-logo.png">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://blackdogs.io/assets/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BlackDogs Security">
     <meta name="twitter:description" content="Seguridad e infraestructura en una sola capa. VSOC, VCISO, cloud propio, monitorización, backups y continuidad operativa.">
-    <meta name="twitter:image" content="https://blackdogs.io/assets/blackdogs-logo.png">
+    <meta name="twitter:image" content="https://blackdogs.io/assets/og-card.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,10 +34,68 @@
       "url": "https://blackdogs.io/",
       "logo": "https://blackdogs.io/assets/blackdogs-logo.png",
       "description": "Ciberseguridad gestionada e infraestructura: VSOC, VCISO, cloud propio, monitorización, backups y continuidad operativa.",
+            "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Carrer d'Aragó, 208-210, 4º 1ª",
+          "postalCode": "08011",
+          "addressLocality": "Barcelona",
+          "addressCountry": "ES"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Bonaventura Riberaygua",
+          "postalCode": "AD500",
+          "addressLocality": "Andorra la Vella",
+          "addressCountry": "AD"
+        }
+      ],
       "email": "info@blackdogs.io",
       "telephone": "+34930186617",
       "areaServed": ["Barcelona", "Andorra", "España"],
-      "knowsAbout": ["Ciberseguridad", "VSOC", "VCISO", "Cloud", "Backups", "Monitorización", "Continuidad operativa"]
+      "knowsAbout": ["Ciberseguridad", "VSOC", "VCISO", "Cloud", "Backups", "Monitorización", "Continuidad operativa"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Virtual SOC (VSOC)" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "CISO as a Service (VCISO)" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "CTO as a Service" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "DevOps as a Service" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Backups a prueba de ransomware" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Cloud propio y multicloud gestionado (AWS, Google Cloud, Azure)" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Certificación ENS, ISO 27001 y SOC 2" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Respuesta a incidentes" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "IA aplicada" }
+          }
+        ]
+      }
     }
     </script>
     <link rel="icon" href="assets/blackdogs-mark.png">
@@ -60,6 +120,7 @@
           <div class="nav-links">
             <a href="#servicios">Servicios</a>
             <a href="#infraestructura">Infraestructura</a>
+            <a href="#backups">Backups</a>
             <a href="#ia">IA</a>
             <a href="#metodo">Método</a>
             <a href="#contacto">Contacto</a>
@@ -247,16 +308,6 @@
               </ul>
             </article>
             <article class="service-card reveal">
-              <span class="service-code">BCTO</span>
-              <h3>CTO as a Service</h3>
-              <p>Acompañamos decisiones de arquitectura, cloud, producto, automatización y operaciones para equipos que necesitan criterio técnico senior.</p>
-              <ul>
-                <li>Arquitectura cloud y microservicios</li>
-                <li>DevOps, CI/CD y calidad</li>
-                <li>Optimización de costes y procesos</li>
-              </ul>
-            </article>
-            <article class="service-card reveal">
               <span class="service-code">AI</span>
               <h3>IA aplicada a seguridad y negocio</h3>
               <p>Ayudamos a introducir inteligencia artificial donde aporta eficiencia real: operaciones, soporte, datos, seguridad y automatización interna.</p>
@@ -270,12 +321,44 @@
         </div>
       </section>
 
+      <section class="section managed-roles" id="gestionados" aria-labelledby="roles-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow">Servicios gestionados</p>
+            <h2 id="roles-title">Talento técnico senior, como servicio.</h2>
+            <p>Incorpora dirección y especialistas sin ampliar plantilla: pagas por el criterio y la ejecución, no por la silla.</p>
+          </div>
+          <div class="roles-grid">
+            <article class="role-card reveal">
+              <span class="service-code">CTO</span>
+              <h3>CTO as a Service</h3>
+              <p>Dirección tecnológica: arquitectura, roadmap, equipo, proveedores y decisiones de producto con visión de negocio.</p>
+            </article>
+            <article class="role-card reveal">
+              <span class="service-code">CISO</span>
+              <h3>CISO as a Service</h3>
+              <p>Dirección de seguridad: políticas, gestión de riesgos, cumplimiento (ENS, ISO 27001) y respuesta ante incidentes.</p>
+            </article>
+            <article class="role-card reveal">
+              <span class="service-code">DEVOPS</span>
+              <h3>DevOps as a Service</h3>
+              <p>Automatización, CI/CD, infraestructura como código, observabilidad y despliegues fiables en cualquier cloud.</p>
+            </article>
+            <article class="role-card reveal">
+              <span class="service-code">SEC</span>
+              <h3>Consultor de ciberseguridad as a Service</h3>
+              <p>Especialista a demanda para auditorías, hardening, revisión de arquitectura y acompañamiento técnico continuo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section infrastructure" id="infraestructura" aria-labelledby="infra-title">
         <div class="container infra-layout">
           <div class="infra-copy">
             <p class="eyebrow">Infraestructura BlackDogs</p>
             <h2 id="infra-title">Cloud propio e infraestructura preparada para datos, seguridad e IA.</h2>
-            <p>Proveemos infraestructura de alto rendimiento, con discos NVMe, CPUs de alta velocidad y escalado de recursos bajo demanda. La operamos para garantizar disponibilidad, rendimiento, continuidad y cargas de IA.</p>
+            <p>Proveemos infraestructura de alto rendimiento sobre nuestro cloud propio, construido sobre XenServer: discos NVMe, CPUs de alta velocidad y escalado de recursos bajo demanda. La operamos de extremo a extremo para garantizar disponibilidad, rendimiento, continuidad y cargas de IA, con tus datos siempre bajo tu control.</p>
             <div class="capability-list">
               <div>
                 <strong>Monitorización gestionada</strong>
@@ -294,6 +377,15 @@
                 <span>Infraestructura, backups y restauración bajo control.</span>
               </div>
             </div>
+            <div class="infra-multicloud">
+              <strong>¿Ya estás en la nube pública?</strong>
+              <span>Además de nuestro cloud propio, gestionamos y protegemos tus entornos en</span>
+              <div class="cloud-badges">
+                <span>Amazon AWS</span>
+                <span>Google Cloud</span>
+                <span>Microsoft Azure</span>
+              </div>
+            </div>
           </div>
           <div class="infra-visual reveal">
             <img src="assets/ppt-image-1.jpeg" alt="Barcelona, una de las sedes de operación de BlackDogs" width="1000" height="648">
@@ -301,6 +393,56 @@
               <strong>Barcelona</strong>
               <span>Operación técnica y proximidad</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section backups" id="backups" aria-labelledby="backups-title">
+        <div class="container backup-layout">
+          <div class="backup-copy">
+            <p class="eyebrow">Resiliencia</p>
+            <h2 id="backups-title">Copias de seguridad a prueba de ransomware.</h2>
+            <p>Cuando un ataque cifra tu entorno, tu empresa vale lo que valga su última copia. Diseñamos, operamos y vigilamos la última línea de defensa de tu información para que siempre exista un punto de partida íntegro desde el que recuperarlo todo.</p>
+            <div class="backup-actions">
+              <a class="button primary" href="mailto:info@blackdogs.io?subject=Quiero%20backups%20a%20prueba%20de%20ransomware">Proteger mis copias</a>
+              <a class="button secondary" href="#contacto">Hablar con un especialista</a>
+            </div>
+            <dl class="backup-proof" aria-label="Garantías del servicio de backup">
+              <div>
+                <dt>3-2-1</dt>
+                <dd>Tres copias, dos soportes y una siempre fuera de tus instalaciones</dd>
+              </div>
+              <div>
+                <dt>NVMe</dt>
+                <dd>Cabinas cifradas propias de alto rendimiento</dd>
+              </div>
+              <div>
+                <dt>ENS · ISO 27001</dt>
+                <dd>Copias alineadas con el ENS (mp.info.6) e ISO/IEC 27001 (control 8.13)</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="backup-grid">
+            <article>
+              <span>01</span>
+              <h3>Copia de todo tu entorno</h3>
+              <p>Servidores, máquinas virtuales, bases de datos, puestos de trabajo y nube: Microsoft 365, Google Workspace, Amazon S3 y cualquier otro repositorio cloud.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Cifradas y de alto rendimiento</h3>
+              <p>Tus copias viven en cabinas propias con discos NVMe, cifradas en tránsito y en reposo. Restauraciones rápidas cuando cada minuto cuenta.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Inmutables frente al ransomware</h3>
+              <p>Versiones inmutables que un atacante no puede cifrar, alterar ni borrar, con detección temprana de cifrados y cambios anómalos en los datos.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Restauración verificada</h3>
+              <p>Monitorizamos cada tarea de copia y probamos la recuperación de forma periódica. Un backup solo cuenta si se restaura: el nuestro se restaura.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -372,20 +514,156 @@
         </div>
       </section>
 
-      <section class="section trust" aria-labelledby="trust-title">
-        <div class="container trust-grid">
-          <div>
-            <p class="eyebrow">Confianza</p>
-            <h2 id="trust-title">Experiencia con organizaciones exigentes.</h2>
-            <p>Trabajamos para empresas, instituciones y equipos con necesidades reales de seguridad, disponibilidad y evolución tecnológica.</p>
+      <section class="section compliance" id="cumplimiento" aria-labelledby="compliance-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow">Cumplimiento</p>
+            <h2 id="compliance-title">Te llevamos hasta la certificación.</h2>
+            <p>Preparamos, implantamos y acompañamos a tu organización en los marcos y certificaciones que exige tu mercado: del análisis inicial de brechas a la auditoría final.</p>
           </div>
-          <div class="client-list" aria-label="Clientes y organizaciones citadas en la web actual">
-            <span>Sevilla FC</span>
-            <span>Alstom</span>
-            <span>Cisco</span>
-            <span>Paack</span>
-            <span>SEAT</span>
-            <span>La Salle Ramon Llull</span>
+          <div class="compliance-grid">
+            <article class="cert-card reveal">
+              <span class="service-code">ENS</span>
+              <h3>Esquema Nacional de Seguridad</h3>
+              <p>Certificación en niveles básico, medio y alto siguiendo las guías CCN-CERT. Imprescindible para trabajar con la administración pública española.</p>
+            </article>
+            <article class="cert-card reveal">
+              <span class="service-code">ISO 27001</span>
+              <h3>Gestión de seguridad de la información</h3>
+              <p>Implantación del SGSI completo: análisis de riesgos, controles del Anexo A, documentación y acompañamiento en la auditoría de certificación.</p>
+            </article>
+            <article class="cert-card reveal">
+              <span class="service-code">SOC 2</span>
+              <h3>Confianza para vender SaaS</h3>
+              <p>Informes Type I y Type II sobre seguridad, disponibilidad y confidencialidad. La referencia para clientes corporativos y mercado americano.</p>
+            </article>
+            <article class="cert-card reveal">
+              <span class="service-code">ISO 22301</span>
+              <h3>Continuidad de negocio</h3>
+              <p>Planes de contingencia, objetivos RTO/RPO y recuperación probada: que un incidente no pare tu operación.</p>
+            </article>
+            <article class="cert-card reveal">
+              <span class="service-code">NIS2</span>
+              <h3>Directiva europea de ciberseguridad</h3>
+              <p>Adecuación para entidades esenciales e importantes: gobernanza, gestión de riesgos, cadena de suministro y notificación de incidentes.</p>
+            </article>
+            <article class="cert-card reveal">
+              <span class="service-code">RGPD</span>
+              <h3>Protección de datos</h3>
+              <p>Registro de tratamientos, evaluaciones de impacto, medidas técnicas y organizativas y respuesta ante brechas de datos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section clients" aria-labelledby="clients-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow">Confían en nosotros</p>
+            <h2 id="clients-title">Clientes que han confiado en BlackDogs.</h2>
+            <p>De la industria al deporte, de la salud a la administración pública: organizaciones que necesitan seguridad, disponibilidad y continuidad reales.</p>
+          </div>
+        </div>
+        <div class="clients-marquee" aria-label="Clientes de BlackDogs">
+          <div class="clients-track">
+            <div class="clients-group">
+              <img src="assets/clients/ajuntament-sitges.png" alt="Ajuntament de Sitges" loading="lazy">
+              <img src="assets/clients/alstom.svg" alt="Alstom" loading="lazy">
+              <img src="assets/clients/assegur.svg" alt="Assegur" loading="lazy">
+              <img src="assets/clients/bmat.png" alt="BMAT" loading="lazy">
+              <img src="assets/clients/caldea.png" alt="Caldea" loading="lazy">
+              <img src="assets/clients/crackppc.png" alt="CrackPPC" loading="lazy">
+              <img src="assets/clients/credit-andorra.svg" alt="Creand Crèdit Andorrà" loading="lazy">
+              <img src="assets/clients/domestic-data-streamers.svg" alt="Domestic Data Streamers" loading="lazy">
+              <img src="assets/clients/drag.png" alt="DRAG" loading="lazy">
+              <img src="assets/clients/espublico.svg" alt="esPublico" loading="lazy">
+              <img src="assets/clients/fiatc.svg" alt="FIATC" loading="lazy">
+              <img src="assets/clients/flateli.png" alt="Flateli" loading="lazy">
+              <img class="client-logo-box" src="assets/clients/hiperpas.webp" alt="Grup Hiper Pas" loading="lazy">
+              <img src="assets/clients/hotel-roger-lluria.svg" alt="Hotel Roger de Llúria" loading="lazy">
+              <img src="assets/clients/isalud.png" alt="iSalud" loading="lazy">
+              <img src="assets/clients/perfumerias-julia.svg" alt="Perfumerías Júlia" loading="lazy">
+              <img src="assets/clients/mediquo.svg" alt="MediQuo" loading="lazy">
+              <img src="assets/clients/meetingdoctors.png" alt="MeetingDoctors" loading="lazy">
+            </div>
+            <div class="clients-group" aria-hidden="true">
+              <img src="assets/clients/ajuntament-sitges.png" alt="Ajuntament de Sitges" loading="lazy">
+              <img src="assets/clients/alstom.svg" alt="Alstom" loading="lazy">
+              <img src="assets/clients/assegur.svg" alt="Assegur" loading="lazy">
+              <img src="assets/clients/bmat.png" alt="BMAT" loading="lazy">
+              <img src="assets/clients/caldea.png" alt="Caldea" loading="lazy">
+              <img src="assets/clients/crackppc.png" alt="CrackPPC" loading="lazy">
+              <img src="assets/clients/credit-andorra.svg" alt="Creand Crèdit Andorrà" loading="lazy">
+              <img src="assets/clients/domestic-data-streamers.svg" alt="Domestic Data Streamers" loading="lazy">
+              <img src="assets/clients/drag.png" alt="DRAG" loading="lazy">
+              <img src="assets/clients/espublico.svg" alt="esPublico" loading="lazy">
+              <img src="assets/clients/fiatc.svg" alt="FIATC" loading="lazy">
+              <img src="assets/clients/flateli.png" alt="Flateli" loading="lazy">
+              <img class="client-logo-box" src="assets/clients/hiperpas.webp" alt="Grup Hiper Pas" loading="lazy">
+              <img src="assets/clients/hotel-roger-lluria.svg" alt="Hotel Roger de Llúria" loading="lazy">
+              <img src="assets/clients/isalud.png" alt="iSalud" loading="lazy">
+              <img src="assets/clients/perfumerias-julia.svg" alt="Perfumerías Júlia" loading="lazy">
+              <img src="assets/clients/mediquo.svg" alt="MediQuo" loading="lazy">
+              <img src="assets/clients/meetingdoctors.png" alt="MeetingDoctors" loading="lazy">
+            </div>
+          </div>
+          <div class="clients-track reverse">
+            <div class="clients-group">
+              <img src="assets/clients/meetinglawyers.png" alt="MeetingLawyers" loading="lazy">
+              <img src="assets/clients/mopec.webp" alt="Mopec" loading="lazy">
+              <img src="assets/clients/mybooking.png" alt="Mybooking" loading="lazy">
+              <img src="assets/clients/paack.svg" alt="Paack" loading="lazy">
+              <img src="assets/clients/pdpaola.svg" alt="PDPAOLA" loading="lazy">
+              <img src="assets/clients/quibus.png" alt="Quibus" loading="lazy">
+              <img src="assets/clients/saas-andorra.png" alt="SAAS Andorra" loading="lazy">
+              <img src="assets/clients/sevilla-fc.png" alt="Sevilla FC" loading="lazy">
+              <img src="assets/clients/totembal.png" alt="Totembal" loading="lazy">
+              <img src="assets/clients/tradebe.png" alt="Tradebe" loading="lazy">
+              <img src="assets/clients/tram-barcelona.png" alt="TRAM Barcelona" loading="lazy">
+              <img src="assets/clients/trasteroverde.png" alt="El Trastero Verde" loading="lazy">
+              <img src="assets/clients/trialing.png" alt="Trialing" loading="lazy">
+              <img src="assets/clients/tupinamba.png" alt="Tupinambà Grup" loading="lazy">
+              <img src="assets/clients/viladomat.svg" alt="Viladomat" loading="lazy">
+              <img src="assets/clients/voicemod.png" alt="Voicemod" loading="lazy">
+              <img src="assets/clients/volartpons.png" alt="Volart Pons" loading="lazy">
+              <img src="assets/clients/wwwbarcelona.png" alt="WWWarcelona" loading="lazy">
+            </div>
+            <div class="clients-group" aria-hidden="true">
+              <img src="assets/clients/meetinglawyers.png" alt="MeetingLawyers" loading="lazy">
+              <img src="assets/clients/mopec.webp" alt="Mopec" loading="lazy">
+              <img src="assets/clients/mybooking.png" alt="Mybooking" loading="lazy">
+              <img src="assets/clients/paack.svg" alt="Paack" loading="lazy">
+              <img src="assets/clients/pdpaola.svg" alt="PDPAOLA" loading="lazy">
+              <img src="assets/clients/quibus.png" alt="Quibus" loading="lazy">
+              <img src="assets/clients/saas-andorra.png" alt="SAAS Andorra" loading="lazy">
+              <img src="assets/clients/sevilla-fc.png" alt="Sevilla FC" loading="lazy">
+              <img src="assets/clients/totembal.png" alt="Totembal" loading="lazy">
+              <img src="assets/clients/tradebe.png" alt="Tradebe" loading="lazy">
+              <img src="assets/clients/tram-barcelona.png" alt="TRAM Barcelona" loading="lazy">
+              <img src="assets/clients/trasteroverde.png" alt="El Trastero Verde" loading="lazy">
+              <img src="assets/clients/trialing.png" alt="Trialing" loading="lazy">
+              <img src="assets/clients/tupinamba.png" alt="Tupinambà Grup" loading="lazy">
+              <img src="assets/clients/viladomat.svg" alt="Viladomat" loading="lazy">
+              <img src="assets/clients/voicemod.png" alt="Voicemod" loading="lazy">
+              <img src="assets/clients/volartpons.png" alt="Volart Pons" loading="lazy">
+              <img src="assets/clients/wwwbarcelona.png" alt="WWWarcelona" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section partners" aria-labelledby="partners-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow">Partners tecnológicos</p>
+            <h2 id="partners-title">Tecnología líder, operada por BlackDogs.</h2>
+            <p>Integramos, desplegamos y operamos soluciones de los principales fabricantes de ciberseguridad.</p>
+          </div>
+          <div class="partner-logos">
+            <img class="partner-logo partner-logo-fortinet" src="assets/fortinet-logo.svg" alt="Fortinet" width="156" height="19" loading="lazy">
+            <img class="partner-logo partner-logo-eset" src="assets/eset-logo-mono.svg" alt="ESET" width="182" height="72" loading="lazy">
+            <img class="partner-logo partner-logo-paloalto" src="assets/palo-alto-logo.svg" alt="Palo Alto Networks" width="391" height="71" loading="lazy">
+            <img class="partner-logo partner-logo-elastic" src="assets/elasticsearch-logo.svg" alt="Elasticsearch" width="410" height="90" loading="lazy">
           </div>
         </div>
       </section>
