@@ -256,7 +256,9 @@ def check_no_inline_handlers():
 
 
 RFC_PAGES = ["csirt/rfc2350/index.html", "csirt/rfc2350/es/index.html",
-             "csirt/rfc2350/ca/index.html"]
+             "csirt/rfc2350/ca/index.html",
+             "csirt/andorra/rfc2350/index.html", "csirt/andorra/rfc2350/es/index.html",
+             "csirt/andorra/rfc2350/ca/index.html"]
 CSIRT_PAGES = ["csirt/index.html", "csirt/es/index.html", "csirt/ca/index.html"]
 
 
@@ -337,6 +339,9 @@ PAGES = [
     ("privacy/index.html", f"{BASE}/privacy", "en"),
     ("privacy/es/index.html", f"{BASE}/privacy/es", "es"),
     ("privacy/ca/index.html", f"{BASE}/privacy/ca", "ca"),
+    ("csirt/andorra/rfc2350/index.html", f"{BASE}/csirt/andorra/rfc2350", "en"),
+    ("csirt/andorra/rfc2350/es/index.html", f"{BASE}/csirt/andorra/rfc2350/es", "es"),
+    ("csirt/andorra/rfc2350/ca/index.html", f"{BASE}/csirt/andorra/rfc2350/ca", "ca"),
 ]
 
 CSIRT_NAV = {
@@ -399,6 +404,15 @@ RFC_TARGETS = {
     "csirt/rfc2350/index.html":    "Critical — 4 hours; High — 1 business day; Medium — 2 business days; Low — 5 business days",
     "csirt/rfc2350/es/index.html": "Critical — 4 horas; High — 1 día hábil; Medium — 2 días hábiles; Low — 5 días hábiles",
     "csirt/rfc2350/ca/index.html": "Critical — 4 hores; High — 1 dia hàbil; Medium — 2 dies hàbils; Low — 5 dies hàbils",
+    "csirt/andorra/rfc2350/index.html":    "Critical — 4 hours; High — 1 business day; Medium — 2 business days; Low — 5 business days",
+    "csirt/andorra/rfc2350/es/index.html": "Critical — 4 horas; High — 1 día hábil; Medium — 2 días hábiles; Low — 5 días hábiles",
+    "csirt/andorra/rfc2350/ca/index.html": "Critical — 4 hores; High — 1 dia hàbil; Medium — 2 dies hàbils; Low — 5 dies hàbils",
+}
+
+# Each team's RFC 2350 §3.3 must name its own operating company, not the other's.
+RFC_ENTITY = {
+    "csirt/rfc2350":         "BlackDogs Security, S.L.",
+    "csirt/andorra/rfc2350": "BlackDogs Security Andorra, S.L.",
 }
 
 
@@ -423,8 +437,9 @@ def check_service_commitments():
             fail(rel, f"RFC 2350 §4.1 response targets missing or altered:\n      expected {line}")
         if "09:00" not in body or "18:00" not in body:
             fail(rel, "RFC 2350 §2.11 operating hours missing")
-        if "BlackDogs Security Andorra S.L." not in body:
-            fail(rel, "RFC 2350 §3.3 Andorran entity name missing")
+        prefix = "csirt/andorra/rfc2350" if rel.startswith("csirt/andorra/") else "csirt/rfc2350"
+        if RFC_ENTITY[prefix] not in body:
+            fail(rel, f"RFC 2350 §3.3 must name {RFC_ENTITY[prefix]}")
 
 
 
@@ -452,6 +467,9 @@ def main():
         [("en", f"{BASE}/privacy", "privacy/index.html"),
          ("es", f"{BASE}/privacy/es", "privacy/es/index.html"),
          ("ca", f"{BASE}/privacy/ca", "privacy/ca/index.html")],
+        [("en", f"{BASE}/csirt/andorra/rfc2350", "csirt/andorra/rfc2350/index.html"),
+         ("es", f"{BASE}/csirt/andorra/rfc2350/es", "csirt/andorra/rfc2350/es/index.html"),
+         ("ca", f"{BASE}/csirt/andorra/rfc2350/ca", "csirt/andorra/rfc2350/ca/index.html")],
     ])
 
     for home, href in CSIRT_NAV.items():
