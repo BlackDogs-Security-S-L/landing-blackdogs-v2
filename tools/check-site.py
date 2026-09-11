@@ -200,6 +200,9 @@ def check_security_txt():
         fail("security.txt", "Expires must appear exactly once")
     if len(fields.get("Canonical", [])) > 1 and BASE not in fields["Canonical"][0]:
         fail("security.txt", "Canonical does not point at this site")
+    for url in fields.get("Policy", []):
+        if "vulnerability-disclosure" not in url:
+            fail("security.txt", f"Policy should point at the CVD policy, got {url}")
     for url in fields.get("Encryption", []):
         local = ROOT / url.replace(BASE + "/", "")
         if not local.exists():
@@ -232,7 +235,10 @@ def check_sitemap():
     locs = {e.text for e in tree.getroot().findall(".//s:loc", ns)}
     for expected in (f"{BASE}/csirt", f"{BASE}/csirt/es", f"{BASE}/csirt/ca",
                      f"{BASE}/csirt/rfc2350", f"{BASE}/csirt/rfc2350/es",
-                     f"{BASE}/csirt/rfc2350/ca"):
+                     f"{BASE}/csirt/rfc2350/ca",
+                     f"{BASE}/csirt/vulnerability-disclosure",
+                     f"{BASE}/csirt/vulnerability-disclosure/es",
+                     f"{BASE}/csirt/vulnerability-disclosure/ca"):
         if expected not in locs:
             fail("sitemap.xml", f"missing {expected}")
 
@@ -322,6 +328,9 @@ PAGES = [
     ("csirt/rfc2350/index.html", f"{BASE}/csirt/rfc2350", "en"),
     ("csirt/rfc2350/es/index.html", f"{BASE}/csirt/rfc2350/es", "es"),
     ("csirt/rfc2350/ca/index.html", f"{BASE}/csirt/rfc2350/ca", "ca"),
+    ("csirt/vulnerability-disclosure/index.html", f"{BASE}/csirt/vulnerability-disclosure", "en"),
+    ("csirt/vulnerability-disclosure/es/index.html", f"{BASE}/csirt/vulnerability-disclosure/es", "es"),
+    ("csirt/vulnerability-disclosure/ca/index.html", f"{BASE}/csirt/vulnerability-disclosure/ca", "ca"),
 ]
 
 CSIRT_NAV = {
@@ -376,14 +385,14 @@ def check_csp():
 
 
 SEVERITY_TARGETS = {
-    "csirt/index.html":    ["1 hour", "4 hours", "1 business day", "3 business days"],
-    "csirt/es/index.html": ["1 hora", "4 horas", "1 día hábil", "3 días hábiles"],
-    "csirt/ca/index.html": ["1 hora", "4 hores", "1 dia hàbil", "3 dies hàbils"],
+    "csirt/index.html":    ["4 hours", "1 business day", "2 business days", "5 business days"],
+    "csirt/es/index.html": ["4 horas", "1 día hábil", "2 días hábiles", "5 días hábiles"],
+    "csirt/ca/index.html": ["4 hores", "1 dia hàbil", "2 dies hàbils", "5 dies hàbils"],
 }
 RFC_TARGETS = {
-    "csirt/rfc2350/index.html":    "Critical — 1 hour; High — 4 hours; Medium — 1 business day; Low — 3 business days",
-    "csirt/rfc2350/es/index.html": "Critical — 1 hora; High — 4 horas; Medium — 1 día hábil; Low — 3 días hábiles",
-    "csirt/rfc2350/ca/index.html": "Critical — 1 hora; High — 4 hores; Medium — 1 dia hàbil; Low — 3 dies hàbils",
+    "csirt/rfc2350/index.html":    "Critical — 4 hours; High — 1 business day; Medium — 2 business days; Low — 5 business days",
+    "csirt/rfc2350/es/index.html": "Critical — 4 horas; High — 1 día hábil; Medium — 2 días hábiles; Low — 5 días hábiles",
+    "csirt/rfc2350/ca/index.html": "Critical — 4 hores; High — 1 dia hàbil; Medium — 2 dies hàbils; Low — 5 dies hàbils",
 }
 
 
@@ -428,6 +437,9 @@ def main():
         [("en", f"{BASE}/csirt/rfc2350", "csirt/rfc2350/index.html"),
          ("es", f"{BASE}/csirt/rfc2350/es", "csirt/rfc2350/es/index.html"),
          ("ca", f"{BASE}/csirt/rfc2350/ca", "csirt/rfc2350/ca/index.html")],
+        [("en", f"{BASE}/csirt/vulnerability-disclosure", "csirt/vulnerability-disclosure/index.html"),
+         ("es", f"{BASE}/csirt/vulnerability-disclosure/es", "csirt/vulnerability-disclosure/es/index.html"),
+         ("ca", f"{BASE}/csirt/vulnerability-disclosure/ca", "csirt/vulnerability-disclosure/ca/index.html")],
     ])
 
     for home, href in CSIRT_NAV.items():
