@@ -2,20 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blackdogs.io/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://blackdogs.io/ca/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://blackdogs.io/en/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blackdogs.io/csirt</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blackdogs.io/csirt/es</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blackdogs.io/csirt/ca</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blackdogs.io/csirt/rfc2350</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blackdogs.io/csirt/rfc2350/es</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blackdogs.io/csirt/rfc2350/ca</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

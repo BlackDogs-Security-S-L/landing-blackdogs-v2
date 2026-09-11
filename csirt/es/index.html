@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>BlackDogs CSIRT | Equipo de respuesta a incidentes de seguridad</title>
+    <meta name="description" content="BlackDogs CSIRT es el equipo de respuesta y coordinación de incidentes de seguridad operado por BlackDogs Security. Reporta incidentes de seguridad, vulnerabilidades y solicitudes de coordinación.">
+    <meta name="theme-color" content="#050706">
+    <link rel="canonical" href="https://blackdogs.io/csirt/es">
+    <link rel="alternate" hreflang="en" href="https://blackdogs.io/csirt">
+    <link rel="alternate" hreflang="es" href="https://blackdogs.io/csirt/es">
+    <link rel="alternate" hreflang="ca" href="https://blackdogs.io/csirt/ca">
+    <link rel="alternate" hreflang="x-default" href="https://blackdogs.io/csirt">
+    <meta property="og:title" content="BlackDogs CSIRT | Equipo de respuesta a incidentes de seguridad">
+    <meta property="og:description" content="BlackDogs CSIRT es el equipo de respuesta y coordinación de incidentes de seguridad operado por BlackDogs Security. Reporta incidentes de seguridad, vulnerabilidades y solicitudes de coordinación.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blackdogs.io/csirt/es">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ca_ES">
+    <meta property="og:site_name" content="BlackDogs Security">
+    <meta property="og:image" content="https://blackdogs.io/assets/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BlackDogs CSIRT">
+    <meta name="twitter:description" content="Equipo de respuesta y coordinación de incidentes de seguridad operado por BlackDogs Security.">
+    <meta name="twitter:image" content="https://blackdogs.io/assets/og-card.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BlackDogs CSIRT",
+      "alternateName": "BD-CSIRT",
+      "url": "https://blackdogs.io/csirt",
+      "logo": "https://blackdogs.io/assets/blackdogs-logo.png",
+      "description": "Equipo de respuesta y coordinación de incidentes de seguridad operado por BlackDogs Security.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "BlackDogs Security",
+        "url": "https://blackdogs.io/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer d'Aragó, 208-210, 4º 1ª",
+        "postalCode": "08011",
+        "addressLocality": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "security incident reporting",
+          "email": "csirt@blackdogs.io",
+          "telephone": "+34930186617",
+          "availableLanguage": ["en", "es", "ca"]
+        }
+      ]
+    }
+    </script>
+    <link rel="icon" href="../../assets/blackdogs-mark.png">
+    <link rel="apple-touch-icon" href="../../assets/blackdogs-mark.png">
+    <link rel="stylesheet" href="../../styles.css?v=20260911">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="../../index.html" aria-label="BlackDogs Security">
+          <img src="../../assets/blackdogs-logo.png" alt="BlackDogs" width="1004" height="230">
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+        <div class="nav-menu" id="site-menu" data-nav-menu>
+          <div class="nav-links">
+            <a href="../../index.html#servicios">Servicios</a>
+            <a href="../../index.html#infraestructura">Infraestructura</a>
+            <a href="../../index.html#backups">Backups</a>
+            <a href="index.html" aria-current="page">CSIRT</a>
+            <a href="../../index.html#metodo">Método</a>
+            <a href="../../index.html#contacto">Contacto</a>
+          </div>
+          <div class="language-switcher" aria-label="Idiomas">
+            <a class="is-active" href="index.html" aria-current="page">ES</a>
+            <a href="../ca/index.html">CA</a>
+            <a href="../index.html">EN</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero csirt-hero section" id="top">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container csirt-hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">BlackDogs Security · España · BD-CSIRT</p>
+            <h1>BlackDogs CSIRT</h1>
+            <p class="csirt-subtitle">Computer Security Incident Response Team</p>
+            <p class="hero-lead">BlackDogs CSIRT es el equipo de respuesta y coordinación de incidentes operado por BlackDogs Security. El equipo da soporte a la detección, el análisis, la contención, la coordinación y la respuesta ante incidentes de ciberseguridad que afectan a su constituency.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#report">Reportar un incidente</a>
+              <a class="button secondary" href="#identification">Información del CSIRT</a>
+            </div>
+          </div>
+
+          <aside aria-labelledby="hero-facts-title">
+            <h2 id="hero-facts-title" class="sr-only">Resumen del equipo</h2>
+            <dl class="fact-list">
+              <div>
+                <dt>Equipo</dt>
+                <dd>BlackDogs CSIRT (BD-CSIRT)</dd>
+              </div>
+              <div>
+                <dt>Organización anfitriona</dt>
+                <dd>BlackDogs Security</dd>
+              </div>
+              <div>
+                <dt>Contacto</dt>
+                <dd><a href="mailto:csirt@blackdogs.io">csirt@blackdogs.io</a></dd>
+              </div>
+              <div>
+                <dt>Teléfono</dt>
+                <dd><a href="tel:+34930186617">+34 930 18 66 17</a></dd>
+              </div>
+              <div>
+                <dt>Idiomas</dt>
+                <dd>Inglés · Español · Catalán</dd>
+              </div>
+              <div>
+                <dt>RFC 2350</dt>
+                <dd><a href="../rfc2350/es/index.html">Descripción del equipo</a></dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="mission" aria-labelledby="mission-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Misión</p>
+            <h2 id="mission-title">Prevención, análisis, contención y coordinación.</h2>
+          </div>
+          <div class="prose">
+            <p>La misión de BlackDogs CSIRT es dar soporte a la prevención, detección, análisis, contención y coordinación de incidentes de ciberseguridad que afectan a BlackDogs Security y a su constituency.</p>
+            <p>El equipo facilita la comunicación entre las partes afectadas, los proveedores de seguridad, los investigadores y otros CSIRT cuando se requiere coordinación.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="constituency" aria-labelledby="constituency-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Constituency</p>
+            <h2 id="constituency-title">A quién atiende el equipo.</h2>
+          </div>
+          <ul class="check-list">
+            <li>La infraestructura, los sistemas y los servicios propios de BlackDogs Security.</li>
+            <li>Organizaciones con acuerdos activos que incluyen explícitamente respuesta a incidentes, monitorización de seguridad, MDR, vSOC, DFIR o capacidades relacionadas con CSIRT dentro del alcance acordado.</li>
+            <li>Otras organizaciones pueden contactar con BlackDogs CSIRT en relación con incidentes o vulnerabilidades que involucren infraestructura o clientes de BlackDogs.</li>
+          </ul>
+          <p class="csirt-note neutral">Las capacidades de respuesta, la autoridad y los niveles de servicio pueden variar en función del acuerdo aplicable con cada constituent. Las organizaciones que contratan otros servicios de BlackDogs Security no se consideran automáticamente constituents de BlackDogs CSIRT, salvo que el acuerdo aplicable incluya capacidades de respuesta o coordinación de incidentes.</p>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="authority" aria-labelledby="authority-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Autoridad</p>
+            <h2 id="authority-title">Mandato y límites de actuación.</h2>
+          </div>
+          <div class="prose">
+            <p>BlackDogs CSIRT opera bajo la autoridad otorgada por BlackDogs Security y, cuando corresponde, por los acuerdos contractuales establecidos con sus constituents.</p>
+            <p>Según el modelo de servicio acordado, BlackDogs CSIRT puede ejecutar directamente acciones de investigación, contención o remediación, o bien emitir recomendaciones que requieren la aprobación de la organización afectada.</p>
+            <p>La autoridad específica aplicable a cada constituent se define contractualmente y puede abarcar desde funciones exclusivamente de asesoramiento y coordinación hasta acciones de contención y remediación previamente autorizadas.</p>
+            <p>BlackDogs CSIRT no realiza acciones intrusivas contra sistemas de terceros sin la autorización adecuada.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services csirt-section" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Ámbito de trabajo</p>
+            <h2 id="services-title">Servicios del CSIRT</h2>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-code">01</span>
+              <h3>Triaje de incidentes</h3>
+              <p>Evaluación inicial, clasificación y priorización de los incidentes de seguridad reportados.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">02</span>
+              <h3>Análisis de incidentes</h3>
+              <p>Investigación técnica de indicadores, logs, actividad en endpoints, eventos de red y artefactos sospechosos.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">03</span>
+              <h3>Respuesta a incidentes</h3>
+              <p>Soporte a las actividades de contención, erradicación, remediación y recuperación.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">04</span>
+              <h3>Coordinación de incidentes</h3>
+              <p>Coordinación entre organizaciones afectadas, proveedores de servicio, fabricantes de seguridad y CSIRT externos.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">05</span>
+              <h3>Revisión posterior al incidente</h3>
+              <p>Análisis de incidentes significativos para identificar causas raíz, lecciones aprendidas, mejoras de control y oportunidades de mejora de la detección y la respuesta.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">06</span>
+              <h3>Forense digital</h3>
+              <p>Adquisición y análisis forense cuando es necesario como parte de la respuesta a incidentes.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">07</span>
+              <h3>Análisis de malware</h3>
+              <p>Análisis estático y dinámico de software malicioso o sospechoso.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">08</span>
+              <h3>Threat Intelligence</h3>
+              <p>Enriquecimiento y contextualización de indicadores, campañas y actividad de adversarios.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">09</span>
+              <h3>Coordinación de vulnerabilidades</h3>
+              <p>Coordinación de vulnerabilidades que afectan a la infraestructura, los servicios o la constituency de BlackDogs.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-code">10</span>
+              <h3>Threat Hunting</h3>
+              <p>Investigación proactiva basada en indicadores, hipótesis y técnicas de adversario.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="report" aria-labelledby="report-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Reporte de incidentes</p>
+            <h2 id="report-title">Reportar un incidente de seguridad</h2>
+            <p>Contacta con BlackDogs CSIRT para:</p>
+            <ul class="check-list">
+              <li>Incidentes de seguridad</li>
+              <li>Sospechas de compromiso</li>
+              <li>Malware</li>
+              <li>Campañas de phishing</li>
+              <li>Compromiso de credenciales</li>
+              <li>Accesos no autorizados</li>
+              <li>Vulnerabilidades que afecten a infraestructura de BlackDogs</li>
+              <li>Incidentes en entornos gestionados por BlackDogs</li>
+              <li>Solicitudes de coordinación de incidentes</li>
+            </ul>
+          </div>
+          <div>
+            <div class="csirt-contact">
+              <div class="contact-line">
+                <span>Email</span>
+                <a href="mailto:csirt@blackdogs.io">csirt@blackdogs.io</a>
+              </div>
+              <div class="contact-line">
+                <span>Teléfono</span>
+                <a href="tel:+34930186617">+34 930 18 66 17</a>
+              </div>
+              <div class="contact-line">
+                <span>Huella PGP</span>
+                <code>05D9 A242 CE24 E6D0 13F2&nbsp; A060 881C 5CE5 806E E9B3</code>
+              </div>
+              <div class="contact-line">
+                <span>Clave pública PGP</span>
+                <a href="../csirt-blackdogs.asc" download>csirt-blackdogs.asc</a>
+              </div>
+              <div class="contact-line">
+                <span>Horario de servicio</span>
+                <span>Lun–Vie, 09:00–18:00 Europe/Madrid</span>
+              </div>
+              <div class="contact-line">
+                <span>Fuera de horario</span>
+                <span>Escalado de guardia según acuerdo</span>
+              </div>
+              <div class="contact-line">
+                <span>Idiomas</span>
+                <span>Inglés · Español · Catalán</span>
+              </div>
+            </div>
+            <p class="csirt-note">No envíes evidencias sensibles, credenciales ni material confidencial por correo sin cifrar.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="report-content" aria-labelledby="report-content-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Contenido del reporte</p>
+            <h2 id="report-content-title">Información a incluir en un reporte</h2>
+            <p>Al reportar un incidente, incluye cuando sea posible:</p>
+          </div>
+          <div>
+            <ul class="check-list">
+              <li>Organización y datos de contacto</li>
+              <li>Fecha y hora de detección</li>
+              <li>Sistemas afectados</li>
+              <li>Descripción de la actividad observada</li>
+              <li>Indicadores de compromiso</li>
+              <li>Logs o evidencias relevantes</li>
+              <li>Acciones ya realizadas</li>
+              <li>Impacto o impacto sospechado</li>
+              <li>Canal de comunicación seguro preferido</li>
+            </ul>
+            <p class="csirt-note">Evita enviar contraseñas, claves privadas o datos personales innecesarios.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="prioritization" aria-labelledby="prioritization-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Triaje</p>
+            <h2 id="prioritization-title">Priorización de incidentes</h2>
+            <p>Los incidentes se priorizan según el impacto de negocio, los activos afectados, el alcance, la explotación activa, el potencial movimiento lateral, la exposición de datos, la interrupción operativa y las implicaciones regulatorias.</p>
+          </div>
+          <div class="severity-grid">
+            <article class="sev-critical">
+              <h3>Critical</h3>
+              <p>Explotación activa, interrupción operativa extendida o exposición confirmada de datos sensibles.</p>
+              <p class="sev-target"><span>Respuesta inicial objetivo</span>1 hora</p>
+            </article>
+            <article class="sev-high">
+              <h3>High</h3>
+              <p>Compromiso confirmado con alcance acotado, o riesgo significativo de escalada o movimiento lateral.</p>
+              <p class="sev-target"><span>Respuesta inicial objetivo</span>4 horas</p>
+            </article>
+            <article class="sev-medium">
+              <h3>Medium</h3>
+              <p>Actividad sospechosa que requiere investigación, con impacto limitado sobre operaciones o datos.</p>
+              <p class="sev-target"><span>Respuesta inicial objetivo</span>1 día hábil</p>
+            </article>
+            <article class="sev-low">
+              <h3>Low</h3>
+              <p>Eventos aislados, reportes informativos o actividad sin impacto observable.</p>
+              <p class="sev-target"><span>Respuesta inicial objetivo</span>3 días hábiles</p>
+            </article>
+          </div>
+          <p class="csirt-note neutral">Son tiempos objetivo para acusar recibo e iniciar el triaje, no tiempos de resolución. Los incidentes críticos se atienden 24x7 para los constituents cuyo acuerdo así lo prevea; el resto de objetivos aplican dentro del horario de servicio indicado. Cuando un acuerdo concreto establezca niveles de servicio distintos, prevalece dicho acuerdo.</p>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="information-handling" aria-labelledby="handling-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Confidencialidad</p>
+            <h2 id="handling-title">Tratamiento de la información</h2>
+            <p>BlackDogs CSIRT trata la información de incidentes bajo el principio de necesidad de conocer y aplica salvaguardas técnicas y organizativas adecuadas para proteger la información sensible.</p>
+            <p>La información recibida y compartida se clasifica utilizando el Traffic Light Protocol (TLP) 2.0. Se recomienda a quien reporta que aplique la designación adecuada al compartir información. Cuando no se proporciona ninguna, BlackDogs CSIRT determina el tratamiento y las restricciones de divulgación apropiadas en función de la sensibilidad y el contexto de la información recibida.</p>
+          </div>
+          <ul class="tlp-grid" aria-label="Designaciones del Traffic Light Protocol 2.0">
+            <li>TLP:CLEAR</li>
+            <li>TLP:GREEN</li>
+            <li>TLP:AMBER</li>
+            <li>TLP:AMBER+STRICT</li>
+            <li>TLP:RED</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="disclosure" aria-labelledby="disclosure-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Investigadores</p>
+            <h2 id="disclosure-title">Divulgación de vulnerabilidades</h2>
+          </div>
+          <div class="prose">
+            <p>Los investigadores de seguridad que identifiquen una vulnerabilidad que afecte a la infraestructura o los servicios de BlackDogs Security pueden reportarla a BlackDogs CSIRT en <a href="mailto:csirt@blackdogs.io">csirt@blackdogs.io</a></p>
+            <p>Fomentamos la divulgación responsable y coordinada, y solicitamos que se conceda tiempo suficiente para la investigación y la remediación antes de cualquier divulgación pública.</p>
+            <p>La información de contacto en formato legible por máquina se publica en <a href="../../.well-known/security.txt">/.well-known/security.txt</a> conforme a RFC 9116.</p>
+            <p class="csirt-note neutral">Se publicará por separado una política específica de divulgación de vulnerabilidades.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="cooperation" aria-labelledby="cooperation-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Cooperación</p>
+            <h2 id="cooperation-title">Trabajo con otros equipos.</h2>
+          </div>
+          <div class="prose">
+            <p>BlackDogs CSIRT apoya la cooperación y el intercambio de información con otros CSIRT, CERT, fabricantes de seguridad, investigadores, proveedores de servicio y autoridades competentes cuando es necesario para una coordinación eficaz del incidente.</p>
+            <p>El intercambio de información se realiza conforme a los requisitos de confidencialidad aplicables, las obligaciones contractuales y la clasificación de la información.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="operating-model" aria-labelledby="operating-model-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Modelo operativo</p>
+            <h2 id="operating-model-title">CSIRT distribuido / virtual</h2>
+          </div>
+          <div class="prose">
+            <p>BlackDogs CSIRT opera como un equipo de respuesta distribuido, apoyado en plataformas de seguridad centralizadas y en mecanismos de acceso remoto controlado.</p>
+            <p>Los miembros del equipo utilizan sistemas gestionados y controles de acceso seguros para operar el entorno de respuesta a incidentes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="vsoc" aria-labelledby="vsoc-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Separación de funciones</p>
+            <h2 id="vsoc-title">CSIRT y vSOC</h2>
+            <p>BlackDogs CSIRT puede utilizar las capacidades de vSOC, DFIR y Threat Intelligence de BlackDogs, pero opera como una función diferenciada.</p>
+          </div>
+          <div class="csirt-duo">
+            <article>
+              <h3>BlackDogs vSOC</h3>
+              <p>Monitorización continua, detección y servicios operativos de seguridad.</p>
+            </article>
+            <article>
+              <h3>BlackDogs CSIRT</h3>
+              <p>Respuesta a incidentes, coordinación, investigación y gestión de crisis.</p>
+            </article>
+          </div>
+          <ol class="flow-chain" aria-label="Flujo de escalado desde la detección hasta la recuperación">
+            <li>vSOC<span>Monitorización continua e ingeniería de detección</span></li>
+            <li>Detección / Alerta<span>Señal cualificada que requiere tratamiento</span></li>
+            <li class="is-team">BlackDogs CSIRT<span>Triaje, propiedad y coordinación del incidente</span></li>
+            <li>Investigación<span>Alcance, cronología y análisis de causa raíz</span></li>
+            <li>Contención / Coordinación<span>Aislamiento, erradicación y comunicación con las partes</span></li>
+            <li>DFIR / Threat Intelligence<span>Adquisición forense, análisis de malware y de adversario</span></li>
+            <li>Recuperación / Lecciones aprendidas<span>Restauración, informe y mejoras preventivas</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section csirt-section" id="identification" aria-labelledby="identification-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Ficha del equipo</p>
+            <h2 id="identification-title">Información del CSIRT</h2>
+            <p>La descripción completa del equipo siguiendo la estructura de RFC 2350 está disponible como documento independiente.</p>
+            <p><a href="../rfc2350/es/index.html">Leer el documento RFC 2350</a></p>
+          </div>
+          <dl class="fact-list">
+            <div>
+              <dt>Nombre del equipo</dt>
+              <dd>BlackDogs CSIRT</dd>
+            </div>
+            <div>
+              <dt>Nombre corto</dt>
+              <dd>BD-CSIRT</dd>
+            </div>
+            <div>
+              <dt>Organización anfitriona</dt>
+              <dd>BlackDogs Security</dd>
+            </div>
+            <div>
+              <dt>País</dt>
+              <dd>España</dd>
+            </div>
+            <div>
+              <dt>Tipo de equipo</dt>
+              <dd>CSIRT comercial / proveedor de servicios</dd>
+            </div>
+            <div>
+              <dt>Modelo operativo</dt>
+              <dd>Distribuido / virtual</dd>
+            </div>
+            <div>
+              <dt>Contacto principal</dt>
+              <dd><a href="mailto:csirt@blackdogs.io">csirt@blackdogs.io</a></dd>
+            </div>
+            <div>
+              <dt>Teléfono</dt>
+              <dd><a href="tel:+34930186617">+34 930 18 66 17</a></dd>
+            </div>
+            <div>
+              <dt>Sitio web</dt>
+              <dd><a href="https://blackdogs.io/csirt">https://blackdogs.io/csirt</a></dd>
+            </div>
+            <div>
+              <dt>ID de clave PGP</dt>
+              <dd><a href="../csirt-blackdogs.asc" download>0x881C5CE5806EE9B3</a></dd>
+            </div>
+            <div>
+              <dt>Reconocimientos externos</dt>
+              <dd><span class="pending">Ninguno reclamado actualmente</span></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <img src="../../assets/blackdogs-logo.png" alt="BlackDogs" width="1004" height="230">
+        <span>© 2026 BlackDogs Security</span>
+        <a href="../rfc2350/es/index.html">RFC 2350</a>
+        <a href="#top">Volver arriba</a>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+  </body>
+</html>
