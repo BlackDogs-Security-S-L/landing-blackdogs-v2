@@ -331,6 +331,12 @@ PAGES = [
     ("csirt/vulnerability-disclosure/index.html", f"{BASE}/csirt/vulnerability-disclosure", "en"),
     ("csirt/vulnerability-disclosure/es/index.html", f"{BASE}/csirt/vulnerability-disclosure/es", "es"),
     ("csirt/vulnerability-disclosure/ca/index.html", f"{BASE}/csirt/vulnerability-disclosure/ca", "ca"),
+    ("legal/index.html", f"{BASE}/legal", "en"),
+    ("legal/es/index.html", f"{BASE}/legal/es", "es"),
+    ("legal/ca/index.html", f"{BASE}/legal/ca", "ca"),
+    ("privacy/index.html", f"{BASE}/privacy", "en"),
+    ("privacy/es/index.html", f"{BASE}/privacy/es", "es"),
+    ("privacy/ca/index.html", f"{BASE}/privacy/ca", "ca"),
 ]
 
 CSIRT_NAV = {
@@ -440,6 +446,12 @@ def main():
         [("en", f"{BASE}/csirt/vulnerability-disclosure", "csirt/vulnerability-disclosure/index.html"),
          ("es", f"{BASE}/csirt/vulnerability-disclosure/es", "csirt/vulnerability-disclosure/es/index.html"),
          ("ca", f"{BASE}/csirt/vulnerability-disclosure/ca", "csirt/vulnerability-disclosure/ca/index.html")],
+        [("en", f"{BASE}/legal", "legal/index.html"),
+         ("es", f"{BASE}/legal/es", "legal/es/index.html"),
+         ("ca", f"{BASE}/legal/ca", "legal/ca/index.html")],
+        [("en", f"{BASE}/privacy", "privacy/index.html"),
+         ("es", f"{BASE}/privacy/es", "privacy/es/index.html"),
+         ("ca", f"{BASE}/privacy/ca", "privacy/ca/index.html")],
     ])
 
     for home, href in CSIRT_NAV.items():
