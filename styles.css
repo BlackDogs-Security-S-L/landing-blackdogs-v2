@@ -1202,15 +1202,18 @@ h3 {
 }
 
 .partner-logos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   align-items: center;
-  gap: 28px clamp(48px, 8vw, 110px);
+  justify-items: center;
+  gap: 40px 48px;
   padding: 18px 0 6px;
 }
 
 .partner-logo {
-  width: auto;
+  width: 150px;
+  height: 48px;
+  object-fit: contain;
   filter: brightness(0) invert(1);
   opacity: 0.62;
   transition: opacity 0.25s ease;
@@ -1220,22 +1223,12 @@ h3 {
   opacity: 1;
 }
 
-.partner-logo-fortinet {
-  height: 26px;
-}
 
 .partner-logo-eset {
-  height: 46px;
   filter: none;
 }
 
-.partner-logo-paloalto {
-  height: 36px;
-}
 
-.partner-logo-elastic {
-  height: 38px;
-}
 
 .locations {
   background: var(--surface);
@@ -1356,7 +1349,13 @@ address strong {
   }
 
   .partner-logos {
-    gap: 24px 40px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 28px 24px;
+  }
+
+  .partner-logo {
+    width: 120px;
+    height: 38px;
   }
 
   .clients-track,
@@ -1373,22 +1372,6 @@ address strong {
     to {
       transform: translateX(calc(-50% - 24px));
     }
-  }
-
-  .partner-logo-fortinet {
-    height: 20px;
-  }
-
-  .partner-logo-eset {
-    height: 36px;
-  }
-
-  .partner-logo-paloalto {
-    height: 28px;
-  }
-
-  .partner-logo-elastic {
-    height: 30px;
   }
 
   .container,
