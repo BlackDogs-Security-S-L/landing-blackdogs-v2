@@ -262,6 +262,20 @@ RFC_PAGES = ["csirt/rfc2350/index.html", "csirt/rfc2350/es/index.html",
 CSIRT_PAGES = ["csirt/index.html", "csirt/es/index.html", "csirt/ca/index.html"]
 
 
+NAV_FRAGMENTS = ["servicios", "infraestructura", "backups", "csirt", "ia", "metodo", "contacto"]
+
+
+def check_nav_consistency():
+    """Every page carries the same seven tabs, in order, so no tab vanishes between pages."""
+    for rel, _, _ in PAGES:
+        body = (ROOT / rel).read_text(encoding="utf-8")
+        nav = re.search(r'<div class="nav-links">(.*?)</div>', body, re.S)
+        hrefs = re.findall(r'href="([^"]*)"', nav.group(1)) if nav else []
+        tabs = [h.rpartition("#")[2] if "#" in h else "csirt" for h in hrefs]
+        if tabs != NAV_FRAGMENTS:
+            fail(rel, f"nav tabs {tabs} != {NAV_FRAGMENTS}")
+
+
 def check_rfc_structure():
     """Sections added after review must not be silently dropped by a later edit."""
     for rel in RFC_PAGES:
@@ -345,7 +359,7 @@ PAGES = [
 ]
 
 CSIRT_NAV = {
-    "index.html": "csirt/index.html",
+    "index.html": "csirt/es/index.html",
     "ca/index.html": "../csirt/ca/index.html",
     "en/index.html": "../csirt/index.html",
 }
@@ -481,6 +495,7 @@ def main():
     check_pgp_key()
     check_sitemap()
     check_no_inline_handlers()
+    check_nav_consistency()
     check_rfc_structure()
     check_retired_wording()
     check_page_rfc_consistency()
@@ -494,7 +509,7 @@ def main():
         return 1
     print(f"OK — {len(PAGES)} pages, links, metadata, hreflang, security.txt, "
           "PGP key, sitemap, RFC 2350 structure, retired wording, page/RFC consistency,\n"
-          "     CSP, service commitments")
+          "     CSP, service commitments, nav consistency")
     return 0
 
 

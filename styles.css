@@ -2063,17 +2063,25 @@ address strong {
   }
 
   .nav-menu {
-    gap: 10px;
+    gap: 6px;
   }
 
   .nav-links {
-    gap: 2px;
+    gap: 0;
   }
 
   .nav-links a,
   .language-switcher a {
     padding-inline: 6px;
     font-size: 0.88rem;
+  }
+
+  .language-switcher {
+    padding-left: 6px;
+  }
+
+  .language-switcher a {
+    min-width: 0;
   }
 }
 
